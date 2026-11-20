@@ -1,0 +1,110 @@
+/* Style 1: Modern Minimal (Light, clean, subtle border & shadow) */
+.container-dropdown {
+  width: 100%;
+  max-width: 380px; /* Adjust this width to whatever suits your layout */
+}
+
+.dropdown-modern,
+.dropdown-dark {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-modern {
+color: #1f2937;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-modern:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.dropdown-modern:hover {
+  border-color: #9ca3af;
+}
+
+/* Style 2: Dark Slate (High contrast, dark theme) */
+.dropdown-dark {
+color: #f3f4f6;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+}
+
+.dropdown-dark:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.dropdown-dark:hover {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+.cardModern {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+}
+
+.cardModern h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+.cardModern p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.cardDark {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  color: #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+.cardDark h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #f9fafb;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 8px;
+}
+
+.cardDark p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.cardDark strong {
+  color: #ffffff;
+}
+
+.emptyState {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+}

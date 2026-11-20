@@ -1,0 +1,37 @@
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.star-empty {
+    color: #c8c8c8;
+    stroke-width: 1.5;
+}
+
+.star-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star-fill svg {
+    max-width: none;
+}
+
+.rating-value {
+    margin-left: 8px;
+    font-size: 15px;
+    color: #555;
+}

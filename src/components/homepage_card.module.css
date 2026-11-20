@@ -1,0 +1,228 @@
+.card {
+  width: 50%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #F8F0ED;
+  /* border: 1px solid #E8D7D2;
+  border-radius: 8px; */
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 8px 28px rgba(73, 52, 63, 0.08);
+}
+
+/* Header */
+.cardHeader {
+  width: 100%;
+  text-align: center;
+  padding: 30px 20px 20px;
+  box-sizing: border-box;
+  background: #F1E3DF;
+}
+
+.cardHeader h2 {
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #49343F;
+}
+
+/* Body */
+.cardBody {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  gap: 24px;
+  background: #F8F0ED;
+}
+
+/* Paragraph content */
+.cardBody p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  font-weight: 400;
+  color: #594750;
+  margin: 0 0 20px;
+}
+
+/* List */
+.cardBody ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+/* List items */
+.cardBody ul li {
+  position: relative;
+  padding: 12px 12px 12px 30px;
+  margin-bottom: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #594750;
+  background: rgba(255, 255, 255, 0.55);
+  border-left: 2px solid #C5A477;
+}
+
+/* List bullet */
+.cardBody ul li::before {
+  content: "✦";
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  color: #A87578;
+  font-size: 0.75rem;
+}
+
+/* Highlighted labels inside list */
+.cardBody ul li span {
+  color: #49343F;
+  font-weight: 600;
+}
+
+
+/* 2. Left side: EXACTLY 40% width */
+.leftImage {
+  flex: 0 0 40%;
+  width: 40%;
+  max-width: 40%;
+  position: relative;        /* Required for Next.js Image fill */
+  min-height: 350px;         /* Prevents height from collapsing */
+  box-sizing: border-box;
+}
+
+/* 3. Right side: EXACTLY 60% width */
+.rightContent {
+  flex: 0 0 60%;
+  width: 60%;
+  max-width: 60%;
+  min-width: 0;              /* Prevents content from forcing item wider than 60% */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Injected wrapper: remove default extra margins and center */
+.rightContent :global(.editorial-content) {
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+/* Reset default margins on raw HTML children */
+.rightContent :global(.editorial-content) h3,
+.rightContent :global(.editorial-content) p,
+.rightContent :global(.editorial-content) ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 4. The unordered list: <ul class="feature-list"> */
+.rightContent :global(.feature-list) {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 5. The list items: <li> */
+.rightContent :global(.feature-list) li {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.5;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* 6. The step labels: <span>Step 1:</span> */
+.rightContent :global(.feature-list) li span {
+  font-weight: 700;
+  color: #0c863f;
+  white-space: nowrap;
+}
+.pageWrapper {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically (if wrapper has height) */
+  width: 100%;
+  min-height: 100vh;       /* Takes up full viewport height if you want vertical center too */
+}
+
+.justcenter {
+  /* border: solid 1px green !important; */
+  /* If you want the text itself centered, keep this. 
+     Otherwise, remove text-align if you want the list left-aligned. */
+  text-align: center; 
+}
+
+/* Force the injected p and ul elements to clear lines */
+.justcenter p,
+.justcenter ul {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Force list items to be block-level so they break onto new lines */
+.justcenter ul {
+  list-style-type: disc !important; /* Restores default bullets */
+  padding-left: 2rem !important;    /* Restores indentation */
+  text-align: left;                 /* Lists usually look best left-aligned */
+}
+
+.justcenter li {
+  display: list-item !important;    /* Forces them onto separate lines */
+  margin-bottom: 0.5rem;
+}
+
+.cardImage {
+  object-fit: fill;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: 85%;
+  }
+}
+
+/* Responsive adjustment: everything stacks vertically on small screens */
+@media (max-width: 768px) {
+   .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cardBody {
+    flex-direction: column;
+  }
+
+  .leftImage {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 240px;
+  }
+
+  .rightContent {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+}

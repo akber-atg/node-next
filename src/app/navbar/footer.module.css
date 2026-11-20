@@ -1,0 +1,331 @@
+/* src/components/footer.module.css */
+
+/* Theme Palette:
+   Base: Deep Espresso Plum (#1e1217)
+   Muted Text: Soft Rose Quartz (#c4b5bc)
+   Headings / Brand: Pure Ivory / Rose Gold (#fff5f6 / #e28292)
+   Accent / Hover: Velvet Rose (#d9657b)
+   Borders: Subtle Rose Shimmer (rgba(226, 130, 146, 0.15))
+*/
+
+.footer {
+  background-color: #1e1217;
+  color: #c4b5bc;
+  border-top: 1px solid rgba(226, 130, 146, 0.18);
+  margin-top: auto;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 32px 28px;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.locationCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 220px;
+}
+
+.brandTitle {
+  font-family: var(--font-playfair), Didot, "Bodoni MT", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff5f6;
+  margin: 0;
+  background: linear-gradient(135deg, #9c1b53 30%, #b84a62 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.locationText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #e2d9dd;
+}
+
+.address {
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #c4b5bc;
+}
+
+.contactDetails {
+  margin-top: 6px;
+}
+
+.contactItem {
+  margin: 6px 0;
+  font-size: 0.875rem;
+}
+
+.contactLink {
+  color: #e28292;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.columnHeading {
+  font-family: var(--font-playfair), Didot, Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+/* Subtle accent line under column headings */
+.columnHeading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background: #e28292;
+  border-radius: 1px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkItem {
+  font-size: 0.875rem;
+}
+
+.link {
+  color: #c4b5bc;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+  display: inline-block;
+}
+
+.link:hover {
+  color: #e28292;
+  transform: translateX(3px);
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(226, 130, 146, 0.12);
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.8125rem;
+  color: #9f8c95;
+}
+
+.copy {
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.legalLink {
+  color: #9f8c95;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: #e28292;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px 24px;
+  }
+
+  .grid {
+    gap: 32px;
+    margin-bottom: 36px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Brand logos: 4 columns on mobile, 8 on tablet and desktop */
+.logoSection {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.mainLogo {
+  width: 25%;
+  flex: 0 0 25%;
+  box-sizing: border-box;
+
+  /* Vertically and horizontally center the logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+}
+
+.brandTitle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(226, 130, 146, 0.5);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 16px;
+  box-sizing: border-box;
+
+  font-family: var(--font-playfair), Didot, Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #e28292;
+  margin: 0;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 75%;
+  flex: 0 0 75%;
+  box-sizing: border-box;
+  gap: 0;
+}
+
+.logoItem {
+  min-width: 0;
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.logoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.logoLabel {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #c4b5bc;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.logoLabel:hover {
+  color: #e28292;
+  text-decoration: underline;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.leftColumn,
+.rightColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  /* .logoGrid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+        width: 50%;
+    flex: 0 0 50%;
+  } */
+  .logoSection {
+    align-items: center;
+    padding-top: 30px; /* Push the logo section down */
+  }
+
+  .mainLogo {
+    align-self: center;
+  }
+
+  .logoGrid {
+    align-self: center;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .logoItem {
+    justify-content: center;
+  }
+   .brandTitle {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    flex: 0 0 140px;
+    border-radius: 50%;
+    /* padding: 12px; */
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+}

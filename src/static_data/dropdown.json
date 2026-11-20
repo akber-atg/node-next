@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elec-1",
+    "name": "Wireless Noise-Canceling Headphones",
+    "category": "electronics",
+    "price": 199.99
+  },
+  {
+    "id": "elec-2",
+    "name": "Mechanical Keyboard (Hot-swappable)",
+    "category": "electronics",
+    "price": 129.50
+  },
+  {
+    "id": "elec-3",
+    "name": "USB-C Portable Monitor 15.6\"",
+    "category": "electronics",
+    "price": 179.00
+  },
+  {
+    "id": "book-1",
+    "name": "Designing Data-Intensive Applications",
+    "category": "books",
+    "price": 45.00
+  },
+  {
+    "id": "book-2",
+    "name": "The Pragmatic Programmer",
+    "category": "books",
+    "price": 39.99
+  },
+  {
+    "id": "book-3",
+    "name": "Structure and Interpretation of Computer Programs",
+    "category": "books",
+    "price": 55.00
+  },
+  {
+    "id": "app-1",
+    "name": "Merino Wool Everyday Hoodie",
+    "category": "apparel",
+    "price": 110.00
+  },
+  {
+    "id": "app-2",
+    "name": "Waterproof Trail Running Shoes",
+    "category": "apparel",
+    "price": 140.00
+  },
+  {
+    "id": "home-1",
+    "name": "Pour-Over Glass Coffee Dripper",
+    "category": "home",
+    "price": 28.50
+  },
+  {
+    "id": "home-2",
+    "name": "Ergonomic Memory Foam Desk Cushion",
+    "category": "home",
+    "price": 42.00
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "places": [
+    {
+      "displayName": {
+        "text": "High Five Ramen",
+        "languageCode": "en"
+      },
+      "rating": 4.6,
+      "userRatingCount": 2154,
+      "reviews": [
+        {
+          "name": "akber",
+          "relativePublishTimeDescription": "3 weeks ago",
+          "rating": 4,
+          "text": {
+            "text": "The half-spice tonkotsu broth was rich and incredible. Expect a wait, but totally worth it.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "The half-spice tonkotsu broth was rich and incredible. Expect a wait, but totally worth it.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Marcus Chen",
+            "uri": "https://www.google.com/maps/contrib/...",
+            "photoUri": "https://lh3.googleusercontent.com/..."
+          },
+          "publishTime": "2026-10-01T18:24:00Z"
+        },
+        {
+          "name": "fatima",
+          "relativePublishTimeDescription": "a month ago",
+          "rating": 5,
+          "text": {
+            "text": "Cozy basement vibes and easily the best broth in the city.",
+            "languageCode": "en"
+          },
+          "originalText": {
+            "text": "Cozy basement vibes and easily the best broth in the city.",
+            "languageCode": "en"
+          },
+          "authorAttribution": {
+            "displayName": "Sarah Miller",
+            "uri": "https://www.google.com/maps/contrib/...",
+            "photoUri": "https://lh3.googleusercontent.com/..."
+          },
+          "publishTime": "2026-09-15T22:11:00Z"
+        }
+      ]
+    }
+  ]
+}

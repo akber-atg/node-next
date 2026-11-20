@@ -1,0 +1,23 @@
+
+[
+  {
+    "id": 1,
+    "label": "Haircuts",
+    "value": "haircuts"
+  },
+  {
+    "id": 2,
+    "label": "Hair Coloring",
+    "value": "hair-coloring"
+  },
+  {
+    "id": 3,
+    "label": "Facials",
+    "value": "facials"
+  },
+  {
+    "id": 4,
+    "label": "Eyebrows",
+    "value": "eyebrows"
+  }
+]

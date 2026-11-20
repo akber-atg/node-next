@@ -1,0 +1,92 @@
+/* Container that locks the height to 200px and spans full width */
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  /* background-color: #0f172a;  */
+}
+
+/* Ensure the <picture> wrapper fills the entire container */
+.bannerContainer picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The actual <img> tag rendered inside <picture> */
+.bannerImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Clips and scales proportionately without stretching */
+  object-position: center; /* Centers focal point on both mobile and desktop crops */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Dark tint ensures text stays readable over variable image colors */
+  /* background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.75),
+    rgba(15, 23, 42, 0.35)
+  ); */
+  padding: 0 24px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* Centers all child elements horizontally */
+  text-align: center;      /* Centers headings and paragraphs */
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Ensures button stays centered and doesn't stretch to full width */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.25rem, 3.5vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* text-shadow: 0 4px 4px rgba(149, 12, 12, 0.6); */
+}
+
+.subtitle {
+  margin: 6px 0 0 0;
+  font-size: clamp(1rem, 1.8vw, 1rem);
+  color: #720b10;
+  /* text-shadow: 0 3px 3px rgba(96, 17, 17, 0.6); */
+}
+
+/* --- Viewport Switching --- */
+/* Default (Desktop: 600px and up) */
+.desktopContent {
+  display: block;
+}
+
+.mobileContent {
+  display: none;
+}
+
+/* Mobile: Under 600px */
+@media (max-width: 599px) {
+  .desktopContent {
+    display: none;
+  }
+  .mobileContent {
+    display: block;
+  }
+}

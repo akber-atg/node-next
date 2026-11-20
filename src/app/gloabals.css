@@ -1,0 +1,26 @@
+.globalContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #c5a1ad;
+}
+
+h1 {
+  color: #c5a1ad;
+}
+
+p {
+  color: #924545;
+  margin-top: 0.35rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .globalContainer {
+    width: 80%;
+  }
+}

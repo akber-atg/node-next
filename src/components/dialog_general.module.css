@@ -1,0 +1,142 @@
+/* Backdrop styling */
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  animation: backdropFadeIn 0.3s ease-out forwards;
+}
+
+/* Base style: Small screens */
+.dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background-color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
+  width: 92vw;
+  max-width: 92vw;
+  margin: auto;
+  overflow: hidden;
+
+  /* Default opening animation: Zoom In */
+  animation: zoomIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Exit animation: Fly away to the left and fade out */
+.closing {
+  animation: flyLeftOut 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+}
+
+/* Large screens */
+@media (min-width: 640px) {
+  .dialog {
+    width: 500px;
+    max-width: 90vw;
+    min-height: 260px;
+  }
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+/* Entrance: Starts small and slightly transparent, zooms to full scale */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Exit: Accelerates toward the left while rotating slightly and fading out */
+@keyframes flyLeftOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  30% {
+    /* Slight preparatory bounce to the right */
+    transform: translateX(20px) scale(0.98);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-120vw) rotate(-8deg) scale(0.7);
+  }
+}
+
+/* Backdrop fade */
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content layout styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.75rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #64748b;
+  line-height: 1;
+  padding: 0;
+}
+
+.closeBtn:hover {
+  color: #0f172a;
+}
+
+.body {
+  flex: 1;
+  margin-top: 1rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actionBtn {
+  padding: 0.6rem 1.25rem;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.actionBtn:hover {
+  background-color: #0369a1;
+}

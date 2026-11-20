@@ -1,0 +1,142 @@
+[
+  {
+    "dayOfWeek": "monday",
+    "alt": "Modern minimal workspace setup",
+    "text": {
+      "title": "Weekend Launch Gear",
+      "subtitle": "Finish your sprint with high-performance peripherals"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/friday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/friday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },
+  {
+    "dayOfWeek": "tuesday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Tueday specail offer",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },
+  {
+    "dayOfWeek": "wednesday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Sound & Mobility",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },
+  {
+    "dayOfWeek": "thursday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Sound & Mobility",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },
+  {
+    "dayOfWeek": "friday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Sound & Mobility",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },  
+  {
+    "dayOfWeek": "saturday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Sound & Mobility",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  },
+  {
+    "dayOfWeek": "sunday",
+    "alt": "Smart lifestyle gadgets and audio devices",
+    "text": {
+      "title": "Sound & Mobility",
+      "subtitle": "Noise-canceling audio designed for travel"
+    },
+    "images": {
+      "desktop": {
+        "src": "/images/banners/saturday-desktop.jpg",
+        "width": 1920,
+        "height": 400
+      },
+      "mobile": {
+        "src": "/images/banners/saturday-mobile.jpg",
+        "width": 800,
+        "height": 400
+      }
+    }
+  }
+]

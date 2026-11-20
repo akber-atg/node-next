@@ -1,0 +1,110 @@
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.marqueeViewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  gap: 0;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marqueeCard {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  flex-shrink: 0;
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 8px; */
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.marqueeContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  /* text-align: left; */
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+}
+
+.marqueeContent h1,
+.marqueeContent h2,
+.marqueeContent p {
+  margin: 0;
+}
+
+.marqueeContent h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.marqueeContent h2 {
+  font-size: 22px;
+}
+
+.marqueeContent p {
+  font-size: 16px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  pointer-events: auto;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .marqueeContainer {
+    height: 50dvh;
+  }
+  .marqueeCard {
+    height: 100%;
+  }
+}

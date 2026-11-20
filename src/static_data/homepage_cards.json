@@ -1,0 +1,43 @@
+[{
+  "id":"hair",
+  "image": "/images/1.png",
+  "alt": "Executive Salon Experience",
+  "htmlContent": "<div class=\"editorial-content\"><h3>The Signature Cricket</h3><p>Crafted with weightless volume and high-gloss polish for all-day structure.</p><ul class=\"feature-list\"><li><span>Step 1:</span> Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul></div>",
+  "title": "The Hair 1 title from home page card"
+},
+{
+  "id":"hair",
+  "image": "/images/2.png",
+  "alt": "Executive Salon Experience",
+  "htmlContent": "<div class=\"editorial-content\"><h3>The Signature Cricket</h3><p>Crafted with weightless volume and high-gloss polish for all-day structure.</p><ul class=\"feature-list\"><li><span>Step 1:</span> Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul></div>",
+  "title": "The Hair 2 title from home page card"
+},
+{
+  "id":"waxing",
+  "image": "/images/hair/h-large-1.jpg",
+  "alt": "Executive Salon Experience",
+  "htmlContent": "<div class=\"editorial-content\"><h3>The Signature Cricket</h3><p>Crafted with weightless volume and high-gloss polish for all-day structure.</p><ul class=\"feature-list\"><li><span>Step 1:</span> Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul></div>",
+  "title": "The Waxing title from home page card"
+},
+{
+  "id":"threading",
+  "image": "",
+  "alt": "",
+  "htmlContent": "<p>This is ur service 1 - there should be left and right arrows that will show</p><ul><li><span>Step 1:</span>  Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul>",  
+  "title": "The Threading title from home page card"
+},
+{
+  "id":"blonding",
+  "image": "",
+  "alt": "",
+  "htmlContent": "<p>This is ur service 1 - there should be left and right arrows that will show</p><ul><li><span>Step 1:</span>  Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul>",  
+  "title": "The Blonding title from home page card"
+},
+{
+  "id":"facials",
+  "image": "",
+  "alt": "",
+  "htmlContent": "<p>This is ur service 1 - there should be left and right arrows that will show</p><ul><li><span>Step 1:</span>  Heat activated protective barrier</li><li><span>Step 2:</span> Custom ceramic tension styling</li><li><span>Step 3:</span> Anti-humidity cold shot lock</li></ul>",  
+  "title": "The Facials title from home page card"
+}
+]

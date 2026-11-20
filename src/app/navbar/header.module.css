@@ -1,0 +1,232 @@
+/* Color Palette & Tokens:
+   Background: Frosted Blush Silk (rgba(255, 245, 247, 0.88))
+   Primary Accent: Deep Rose Velvet (#b84a62)
+   Soft Accent: Rose Gold (#e28292)
+   Dark Contrast: Espresso Plum (#2b1b22)
+   Glow: rgba(226, 130, 146, 0.25)
+*/
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 248, 249, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 130, 146, 0.2);
+  box-shadow: 0 4px 24px rgba(184, 74, 98, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Brand / Logo */
+.brand {
+font-family: var(--font-playfair), Didot, Georgia, serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2b1b22;
+  text-decoration: none;
+background: linear-gradient(135deg, #2b1b22 30%, #b84a62 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.brand:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* Desktop Navigation */
+.desktopList {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #5a444e;
+  padding: 8px 2px;
+  transition: color 0.3s ease;
+}
+
+/* Underline slide & glow effect */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e28292, #b84a62);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLink:hover {
+  color: #b84a62;
+}
+
+.navLink:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Active State */
+.navLinkActive {
+  color: #b84a62;
+  font-weight: 600;
+}
+
+.navLinkActive::after {
+  width: 100%;
+  left: 0;
+  box-shadow: 0 2px 8px rgba(184, 74, 98, 0.35);
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(226, 130, 146, 0.35);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.15rem;
+  color: #b84a62;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.hamburger:hover {
+  background: rgba(226, 130, 146, 0.12);
+  border-color: #b84a62;
+  transform: scale(1.04);
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid #b84a62;
+  outline-offset: 2px;
+}
+
+/* Mobile Drawer (Hidden on Desktop) */
+.mobileMenu {
+  display: none;
+}
+
+/* Mobile Responsive Breakpoint */
+@media (max-width: 768px) {
+  .container {
+    height: 64px;
+    padding: 0 20px;
+  }
+
+  .desktopList {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 250, 251, 0.98);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(226, 130, 146, 0.25);
+    box-shadow: 0 16px 32px rgba(184, 74, 98, 0.08);
+    animation: drawerSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.92)),
+  url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+  
+  /* Frosted glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  }
+
+  .mobileList {
+    list-style: none;
+    margin: 0;
+    padding: 16px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mobileItem {
+    width: 100%;
+  }
+
+  .mobileLink {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4a333d;
+    border-radius: 8px;
+    background: transparent;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .mobileLink:hover {
+    background: rgba(226, 130, 146, 0.1);
+    color: #b84a62;
+    padding-left: 22px;
+  }
+
+  .mobileLinkActive {
+    background: linear-gradient(135deg, rgba(226, 130, 146, 0.18), rgba(184, 74, 98, 0.12));
+    color: #b84a62;
+    font-weight: 600;
+  }
+}
+
+/* Smooth Slide Animation for Mobile Menu */
+@keyframes drawerSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

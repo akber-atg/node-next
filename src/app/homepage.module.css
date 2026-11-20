@@ -1,0 +1,78 @@
+.globalContainer {
+  width: 80%;
+  margin: 0 auto;
+  /* background: linear-gradient(
+    135deg,
+    #fce7f3 0%,
+    #f3e8ff 50%,
+    #e0f2fe 100%
+  );
+  background-attachment: fixed; */
+}
+
+.videoContainer {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.landingVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F8F0ED;
+  margin-top: 10px;
+  margin-bottom: 10px;
+    /* border: 1px solid #E8D7D2; */
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* top: 50;
+  left:60;
+  height: 100%; */
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  /* box-sizing: border-box; */
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.buttonWrapper1 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px auto 30px;
+}
+
+/* this media query is for small screen */
+@media (max-width: 768px) {
+  .globalContainer {
+    width: 100%;
+  }
+
+  .cardContainer {
+    margin: 0 auto;
+  }
+  .buttonWrapper1 {
+    width: 92%;
+  }
+}

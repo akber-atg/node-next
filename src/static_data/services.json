@@ -1,0 +1,233 @@
+{
+  "servicesData": [
+    {
+      "serviceId": "hair",
+      "mainServiceName": "Hair Cutting & Styling",
+      "mainServiceImage": "lady-hair.png",
+      "mainServiceDescription": "Precision cuts and custom styling tailored to your unique face shape and hair texture.",
+      "mainBookingUrl":"https://akberalikhan.com",
+      "categories": [
+        {
+          "id": "cat_classic_cut",
+          "name": "Classic Haircut",
+          "duration": "45 mins",
+          "price": 45.0,
+          "description": "A tailored cut using scissors and clippers, finished with a hot towel treatment and premium pomade styling.",
+          "bookingUrl": "makeup.jpg"
+        },
+        {
+          "id": "cat_skin_fade",
+          "name": "Skin Fade & Blend",
+          "duration": "60 mins",
+          "price": 55.0,
+          "description": "A high-precision bald fade blended seamlessly into your choice of length on top with sharp hairline detailing.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_buzz_trim",
+          "name": "Buzz Cut & Lineup",
+          "duration": "20 mins",
+          "price": 25.0,
+          "description": "A clean, uniform clipper cut using a single guard length all over, paired with an ultra-refreshing neck shave.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_wash_style",
+          "name": "Premium Wash & Style",
+          "duration": "30 mins",
+          "price": 30.0,
+          "description": "An invigorating tea tree oil shampoo scalp massage and conditioning wash, followed by a professional blowout.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_kids_cut",
+          "name": "Children's Haircut",
+          "duration": "30 mins",
+          "price": 25.0,
+          "description": "A patient, fun, and fast-paced styling session for kids under 12. Includes a light kid-friendly styling gel.",
+          "bookingUrl": "lady-hair.png"
+        }
+      ]
+    },
+    {
+      "serviceId": "waxing",
+      "mainServiceName": "this is waxing",
+      "mainServiceImage": "makeup.jpg",
+      "mainServiceDescription": "Traditional barbering treatments for clean shaves and perfectly sculpted facial hair.",
+      "mainBookingUrl":"https://akberalikhan.com",
+      "categories": [
+        {
+          "id": "cat_beard_sculpt",
+          "name": "Beard Sculpting & Trim",
+          "duration": "35 mins",
+          "price": 35.0,
+          "description": "Full beard reshaping, length reduction, and line detailing using precise clippers, infused with hot beard oils.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_hot_towel",
+          "name": "Classic Hot Towel Shave",
+          "duration": "45 mins",
+          "price": 40.0,
+          "description": "Straight razor shave using traditional pre-shave oils, rich hot lather, dynamic face massage, and cold towel finish.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_beard_color",
+          "name": "Beard Camo & Color",
+          "duration": "30 mins",
+          "price": 30.0,
+          "description": "A subtle, natural blending process to minimize gray patches and redefine your beard structure seamlessly.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_moustache_trim",
+          "name": "Moustache Trim & Wax",
+          "duration": "15 mins",
+          "price": 15.0,
+          "description": "Precise detailing of the upper lip line, bulk reduction, and styling with premium styling mustache wax.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_head_shave",
+          "name": "Razor Head Shave",
+          "duration": "45 mins",
+          "price": 45.0,
+          "description": "A complete straight razor head shave utilizing hot lather, premium shaving creams, and post-shave moisturizer.",
+          "bookingUrl": "lady-hair.png"
+        }
+      ]
+    },
+    {
+      "serviceId": "threading",
+      "mainServiceName": "Hair Color Treatments",
+      "mainServiceImage": "lady-hair.png",
+      "mainServiceDescription": "Expert chemical color services from complete gray coverage to modern dimensional trends.",
+      "mainBookingUrl":"https://akberalikhan.com",
+      "categories": [
+        {
+          "id": "cat_gray_blend",
+          "name": "Gray Root Touch-Up",
+          "duration": "75 mins",
+          "price": 70.0,
+          "description": "Precise root color application to completely cover or blend up to 2 inches of gray regrowth.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_full_balayage",
+          "name": "Dimensional Balayage",
+          "duration": "150 mins",
+          "price": 160.0,
+          "description": "Hand-painted, natural-looking highlights that create soft, low-maintenance dimension through the hair.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_partial_lights",
+          "name": "Partial Foil Highlights",
+          "duration": "90 mins",
+          "price": 95.0,
+          "description": "Foiled highlights targeting the crown and framing the face for an instant brightness boost.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_all_over",
+          "name": "All-Over Solid Color",
+          "duration": "90 mins",
+          "price": 85.0,
+          "description": "A single process color applied roots-to-ends for a rich, high-shine unified color transformation.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_toner_gloss",
+          "name": "Toner & Gloss Treatment",
+          "duration": "45 mins",
+          "price": 40.0,
+          "description": "A quick processing glaze to eliminate brassiness, refresh faded color shades, and inject high shine.",
+          "bookingUrl": "lady-hair.png"
+        }
+      ]
+    },
+    {
+      "serviceId": "blonding",
+      "mainServiceName": "Scalp & Hair Therapy",
+      "mainServiceImage": "lady-hair.png",
+      "mainServiceDescription": "Rejuvenating deeply structural treatments designed to repair hair damage and soothe the scalp.",
+      "mainBookingUrl":"https://akberalikhan.com",
+      "categories": [
+        {
+          "id": "cat_keratin_express",
+          "name": "Keratin Smoothing Therapy",
+          "duration": "120 mins",
+          "price": 140.0,
+          "description": "A protein-enriching sealing treatment that eliminates frizz, blocks humidity, and adds shine for up to 8 weeks.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_deep_condition",
+          "name": "Hydrating Moisture Mask",
+          "duration": "30 mins",
+          "price": 35.0,
+          "description": "Intense deep conditioning under an infrared heat lamp to revitalize dry, brittle, or parched strands.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_scalp_detox",
+          "name": "Exfoliating Scalp Scrub",
+          "duration": "40 mins",
+          "price": 45.0,
+          "description": "A chemical and physical scalp exfoliation to eliminate product buildup, flakes, and stimulate healthy root growth.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_olaplex_bond",
+          "name": "Olaplex Bond Repair",
+          "duration": "45 mins",
+          "price": 50.0,
+          "description": "A multi-step bond-building formula that chemically links broken disulfide bonds caused by heat or bleach damage.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_hard_water",
+          "name": "Hard Water Mineral Removal",
+          "duration": "35 mins",
+          "price": 30.0,
+          "description": "An antioxidant vitamin rinse to strip away green chlorine tints, mineral chalk buildup, and heavy metal deposits.",
+          "bookingUrl": "lady-hair.png"
+        }
+      ]
+    },
+    {
+      "serviceId": "facials",
+      "mainServiceName": "Skincare & Facials",
+      "mainServiceImage": "lady-hair.png",
+      "mainServiceDescription": "Professional skin conditioning, clarifying masks, and relaxation treatments.",
+      "mainBookingUrl":"https://akberalikhan.com",
+      "categories": [
+        {
+          "id": "cat_express_facial",
+          "name": "Express Glow Facial",
+          "duration": "30 mins",
+          "price": 45.0,
+          "description": "A fast double cleanse, gentle exfoliation, dynamic custom serum infusion, and light moisture lock for quick radiance.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_charcoal_detox",
+          "name": "Charcoal Pore Detox",
+          "duration": "50 mins",
+          "price": 65.0,
+          "description": "Deep blackhead extractions paired with an activated charcoal mask to pull toxins out of congested skin layers.",
+          "bookingUrl": "lady-hair.png"
+        },
+        {
+          "id": "cat_anti_aging",
+          "name": "Collagen Firming Facial",
+          "duration": "60 mins",
+          "price": 85.0,
+          "description": "A multi-step anti-aging treatment with collagen-boosting serums, microcurrent toning, and a lifting mask for elasticity.",
+          "bookingUrl": "lady-hair.png"
+        }
+      ]
+    }
+  ]
+}
