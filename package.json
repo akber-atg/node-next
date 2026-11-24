@@ -16,6 +16,8 @@
   "dependencies": {
     "@marsidev/react-turnstile": "^1.6.2",
     "@neondatabase/serverless": "^1.2.0",
+    "@tanstack/react-query": "^5.108.4",
+    "@tanstack/react-query-devtools": "^5.108.4",
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
     "lucide-react": "^1.61.0",

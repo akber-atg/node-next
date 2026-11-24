@@ -5,7 +5,11 @@ import { CalendarHeart } from "lucide-react";
 
 // css modules
 import styles from "@/app/homepage.module.css";
-
+//hooks
+import {
+  useLandingPageContents,
+  useGoogleReviews,
+} from "@/app/hooks/useLandingPageContents";
 //components
 import { Button } from "@/components/btn_booking";
 import GoogleReviews from "@/components/google_reviews";
@@ -20,7 +24,6 @@ import HeroSection from "@/components/hero_section_image";
 import reviews from "@/static_data/ratings.json";
 import Chat from "@/components/chatbot";
 
-
 interface PageItem {
   id: number;
   title: string;
@@ -34,56 +37,85 @@ interface PageItem {
 
 enum ServiceType {
   Hair = 1,
-  Facial=2,
-  Waxing=3,
-  Threading=4,
-  Microblading=5,
+  Facial = 2,
+  Waxing = 3,
+  Threading = 4,
+  Microblading = 5,
 }
 
 export default function Home() {
+  const hasLoaded = useRef(false);
 
-  const [pageData, setPageData] = useState<PageItem[]>([]);
-  const [dialogItems, setDialogItems] = useState<PageItem | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(true);
+  const { data, isLoading, error } = useLandingPageContents();
+  const {
+    data: reviewsData,
+    isLoading: reviewsLoading,
+    error: reviewsError,
+  } = useGoogleReviews();
+
+  const pageData: PageItem[] = data?.data ?? [];
+
+  const dialogItems: PageItem | null =
+    pageData.find((item: PageItem) => item.id === ServiceType.Hair) || null;
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // const getGoogleLocation = async () => {
+  //   try {
+  //     const response = await fetch("/api/googlereviews");
+
+  //     if (!response.ok) {
+  //       throw new Error("Failed to retrieve Google location");
+  //     }
+
+  //     const data = await response.json();
+
+  //     console.log("Google Location:", data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.2;
     }
+    if (hasLoaded.current) return;
+    hasLoaded.current = true;
+
+    //getGoogleLocation();
   }, []);
 
-  useEffect(() => {
-    const getPageData = async () => {
-      try {
-        const res = await fetch("/api/landingpage");
-        if (!res.ok) {
-          throw new Error("Failed to fetch page data");
-        }
-        const json = await res.json();
-        const dialogItem = json.data.find((item: PageItem) => item.id === ServiceType.Hair);
-        setDialogItems(dialogItem || null);
+  if (isLoading) return <div>Loading...</div>;
 
-        setPageData(json.data || []);
-      } catch (error) {
-        console.error("Error fetching page data:", error);
-      }
-    };
+  if (error) return <div>Error loading content.</div>;
 
-    getPageData();
-  }, []);
+  if (reviewsLoading) {
+    console.log("Loading Google reviews");
+  }
+
+  if (reviewsError) {
+    console.log("Error:", reviewsError);
+  }
+
+  if (reviewsData) {
+    console.log("Google reviews:", reviewsData.reviews);
+  }
 
   return (
     <>
       <h1>Welcome</h1>
-      <HeroSection image="/images/landingpage/mobile-full-screen.png" 
-                  title="Welcome to My APP" 
-                  subtitle="Experience the best in software services" 
-                  description="Discover our range of premium services designed to enhance your natural requierements." />
+      <HeroSection
+        image="/images/landingpage/mobile-full-screen.png"
+        title="Welcome to My APP"
+        subtitle="Experience the best in software services"
+        description="Discover our range of premium services designed to enhance your natural requierements."
+      />
 
       {dialogItems ? (
         <OfferDialog
-          isOpen={!!dialogItems}
-          onClose={() => setDialogItems(null)}
+          isOpen={isDialogOpen}
+          onClose={() => setIsDialogOpen(false)}
           title={dialogItems.title}
           description={dialogItems.contents}
         />
@@ -139,7 +171,7 @@ export default function Home() {
         )} */}
         <MarqueeBanner />
 
-        <div className={styles.cardContainer} style={{ marginTop: "2rem" }}> 
+        <div className={styles.cardContainer} style={{ marginTop: "2rem" }}>
           <Card cardId={"facials"} />
 
           <div className={styles.buttonWrapper1}>
@@ -158,10 +190,9 @@ export default function Home() {
         </div>
 
         <CenterHeroCarousel />
- {/* <main>
+        {/* <main>
       <Chat />
     </main> */}
-        
       </div>
     </>
   );
