@@ -99,12 +99,16 @@ export default function Home() {
   }
 
   if (reviewsData) {
-    console.log("Google reviews:", reviewsData.reviews);
+    console.log("Google reviews from api:", reviewsData.data.reviews);
   }
 
   return (
     <>
       <h1>Welcome</h1>
+
+      
+      <GoogleReviews reviews={reviewsData?.data?.reviews??[]} />
+
       <HeroSection
         image="/images/landingpage/mobile-full-screen.png"
         title="Welcome to My APP"
@@ -121,7 +125,6 @@ export default function Home() {
         />
       ) : null}
 
-      <GoogleReviews data={reviews} />
 
       <div className={styles.globalContainer}>
         <div className={styles.videoContainer}>
